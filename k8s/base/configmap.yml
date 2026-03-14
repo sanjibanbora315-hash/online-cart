@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: online-cart-config
+  namespace: online-cart
+data:
+  SPRING_PROFILES_ACTIVE: "kubernetes"
+  EUREKA_SERVER_URL: "http://discovery-server:8761/eureka/"
+  CONFIG_SERVER_URL: "http://config-server:8888"
+  MYSQL_HOST: "mysql"
+  MYSQL_PORT: "3306"
+  REDIS_HOST: "redis"
+  REDIS_PORT: "6379"
+  KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
+  LOGSTASH_HOST: "logstash"
+  LOGSTASH_PORT: "5000"
